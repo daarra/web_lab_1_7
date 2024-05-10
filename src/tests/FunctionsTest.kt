@@ -29,7 +29,9 @@ class FunctionsTest {
     fun uniqueCounterTest() {
         assertEquals(mapOf("a" to 3, "b" to 1, "c" to 1), functions.uniqueCounter("a, a, a, b, c", ", "))
         assertEquals(mapOf("a," to 3, "b," to 1, "c," to 1), functions.uniqueCounter("a, a, a, b, c", " "))
+        assertEquals(mapOf("a," to 3, "b," to 1, "c" to 1), functions.uniqueCounter("a, a, a, b, c", " "))
     }
+
     @Test
     fun isPalindromeTest() {
         assertEquals(true, functions.isPalindrome("abccba"))
